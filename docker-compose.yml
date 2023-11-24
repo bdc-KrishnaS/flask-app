@@ -1,0 +1,21 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - flask-net
+    ports:
+      - "5000:5000"
+    environment:
+      - NAME=World
+    command: ["python", "app.py"]
+    restart: always
+
+networks:
+  flask-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.56.1.0/24"

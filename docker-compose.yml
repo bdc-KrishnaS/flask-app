@@ -17,5 +17,4 @@ networks:
   flask-net:
     ipam:
       driver: default
-      config:
-        - subnet: "10.56.1.0/24"
+      

@@ -12,7 +12,7 @@ ENV NAME World
 
 CMD ["python", "app.py"]
 # Run cleanup script after the main application starts
-CMD ["sh", "/app/cleanup.sh"]
+# CMD ["sh", "/app/cleanup.sh"]
 
 
 

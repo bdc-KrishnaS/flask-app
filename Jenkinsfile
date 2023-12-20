@@ -33,7 +33,7 @@ pipeline {
         
         stage('Deploy to Conatiner') {
             steps {
-                sh "copy /home/user/docker-compose/docker-compose.yml . "
+                sh "cp /home/user/docker-compose/docker-compose.yml . "
                 sh "docker-compose down "
                 sh "docker-compose up --build -d"
             }

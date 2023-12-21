@@ -6,20 +6,20 @@ pipeline {
     // }
     
     
-    stages {
-        stage('clean workspace'){
-            steps{
-                cleanWs()
-            }
-        }
+    // stages {
+    //     stage('clean workspace'){
+    //         steps{
+    //             cleanWs()
+    //         }
+    //     }
         
-        stage('Git Clone') {
-             steps{         
-                 git branch: 'main', url: 'https://github.com/bdc-KrishnaS/flask-app.git'
+        // stage('Git Clone') {
+        //      steps{         
+        //          git branch: 'main', url: 'https://github.com/bdc-KrishnaS/flask-app.git'
         //         // sh "git clone https://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@github.com/Bluedata-Consulting/Document_generator.git"
         //         // sh "git clone https://github.com/Bluedata-Consulting/Document_generator.git"
-             }
-         }
+        //     }
+        // }
         
         // stage("Docker Build & Push"){
         //     steps{

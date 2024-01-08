@@ -4,6 +4,7 @@ pipeline {
     stage('deploy') {
       agent any
       steps {
+        bat 'docker-compose down'
         bat 'docker-compose up --build -d'
       }
     }
